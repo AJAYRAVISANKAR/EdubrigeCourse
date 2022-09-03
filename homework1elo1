@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class CalculateSal { 
+	public static void main(String[] args) {
+		int salary=0,shifts=0; 
+		double savings=0; 
+		Scanner scanner=new Scanner(System.in); 
+		System.out.println("Enter the salary");
+		salary = scanner.nextInt(); 
+		System.out.println("Enter the sfifts");
+		shifts = scanner.nextInt();
+		if(salary > 8000) 
+			System.out.println("Salary too large "); 
+		else if(shifts<0) 
+			System.out.println("Shifts too small"); 
+		else if(salary<0) 
+			System.out.println("Salary too small"); 
+		else
+		{ 
+			int food=(int) (salary*0.3);
+			int travel=(int)(salary*0.2);
+			savings=(salary - food -travel)+(salary*0.02*shifts);
+			
+		System.out.printf ("%.0f",savings);
+		} 
+	} 
+}
